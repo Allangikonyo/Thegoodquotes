@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'quoteapp';
+  
+  // getting the value of title and link in HTML, when printed out
+  add_article(title: HTMLInputElement, link:HTMLInputElement){
+    console.log(title.value)
+  }
 }
