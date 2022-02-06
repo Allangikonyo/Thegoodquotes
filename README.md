@@ -1,6 +1,6 @@
 # Quoteapp
 
-## By Allan Gikonyo, 6/02/2022
+### By Allan Gikonyo, 6/02/2022
 
 ## Description
 
