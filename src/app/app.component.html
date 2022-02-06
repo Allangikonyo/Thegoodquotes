@@ -2,11 +2,15 @@
   <h3>Add a Quote</h3>
   <div class = "title_container">
     <label for="title">Name: </label>
-    <input type="text" id= "title">
+    <input type="text" id= "title" #title>
   </div>
   <div class = "link_container">
     <label for="link">Quote: </label>
-    <input type="text" id= "link">
+    <input type="text" id= "link" #link>
   </div>
-  <button class = "submit_btn">Submit</button>
+
+  <button class = "submit_btn" (click)= "add_article(title, link)">Submit</button>
 </div>
+
+<!-- article component  -->
+<app-article></app-article>
