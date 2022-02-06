@@ -1,6 +1,16 @@
 # Quoteapp
 
+## By Allan Gikonyo, 6/02/2022
+
+## Description
+
+The following repo represents a quote application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
+
+The following is the demo user interface of the landing page
+
+![QuoteApp](./img/pizza-parlour-reference.jpeg)
 
 ## Development server
 
