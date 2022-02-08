@@ -1,13 +1,13 @@
 export class Article{
     title: string
-    link: string 
+    username: string 
     votes: number 
 
 //default function that gets executed
 // added question mark to votes for non-mandatory element
-    constructor (title: string, link: string, votes?: number){
+    constructor (title: string, username: string, votes?: number){
         this.title = title
-        this.link = link 
+        this.username = username
         this.votes = votes || 0
 
     }
