@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Article } from './article.model';
+// import { url } from 'inspector';
+import { Quote } from '../app/quote.model';
 
 @Component({
   selector: 'app-root',
@@ -7,26 +8,28 @@ import { Article } from './article.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  articles: Article[]
+  quotes: Quote[]
+
+  myimage:string = "../assets/img/seashore1.jpeg";
 
   constructor() { 
-    this.articles = [
-      new Article ('Angular', 'https//angular.io', 3)
+    this.quotes = [
+      new Quote('Shakespeare', 'To be or not to be', 3)
 
     ]
     
   }
   
   // getting the value of title and link in HTML, when printed out
-  add_article(title: HTMLInputElement, link:HTMLInputElement){
-    this.articles.push(new Article(title.value, link.value ))
-    title.value = ''
-    link.value = ''
+  add_quote(username: HTMLInputElement, quote:HTMLInputElement){
+    this.quotes.push(new Quote(username.value, quote.value ))
+    username.value = ''
+    quote.value = ''
   }
 
   // function that sorts articles
   
-  sortedArticles (): Article[]{
-    return this.articles.sort ((a: Article, b: Article) => b.votes - a.votes)
+  sortedQuotes (): Quote[]{
+    return this.quotes.sort ((a: Quote, b: Quote) => b.votes - a.votes)
   }
 }
