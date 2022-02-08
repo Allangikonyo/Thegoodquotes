@@ -1,18 +1,54 @@
+<!-- <div class = "body"> -->
+
+<!-- <div [ngStyle]="{background-image: 'url(/quoteapp/img/sea_shore1\ .jpeg ')'}"></div> -->
+
+<!-- <div [style.background-image]="'url(../quoteapp/img/sea_shore1\.jpeg)'"></div> -->
+
+<div class = "header">
+  <!-- <h1>THE GOOD QUOTES</h1> -->
+  <!-- <br><br>
+  <p>“Words are pale shadows of forgotten names. As names have power, words have power. Words can light fires in the minds of men. Words can wring tears from the hardest hearts.”
+    <br><br>
+    ― Patrick Rothfuss, The Name of the Wind</p> -->
+</div>
+
 <div class = "container">
-  <h3>Add a Quote</h3>
-  <div class = "title_container">
-    <label for="title">Name: </label>
-    <input type="text" id= "title" #title>
+  <div class = "intro" >
+    <h1>THE GOOD QUOTES</h1>
+    <div class = "paragraph">
+    <p>“Words are pale shadows of forgotten names. As names have power, words have power. Words can light fires in the minds of men. Words can wring tears from the hardest hearts.”
+      <br><br>
+      ― Patrick Rothfuss, The Name of the Wind</p>
+
+    </div>
+
+    <h3>Add Your Own Quote: </h3>
   </div>
-  <div class = "link_container">
-    <label for="link">Quote: </label>
-    <input type="text" id= "link" #link>
+  
+  <div class = "name_container">
+    <label for="username">Username: </label>
+    <input type="text" id= "username" #username>
   </div>
 
-  <button class = "submit_btn" (click)= "add_article(title, link)">Submit</button>
+  <div class = "quote_container">
+    <label for="quote">Quote: </label>
+    <input type="text" id= "quote" #quote>
+  </div>
+
+  <button class = "submit_btn" (click)= "add_quote(username, quote)">Submit</button>
 </div>
 
-<!-- article component  -->
+<br><br>
+
+<!-- quote component  -->
+
 <div>
-  <app-article *ngFor="let article of sortedArticles()" [article]= "article"></app-article>
+  <app-quote *ngFor = "let quote of sortedQuotes()" [quote] = "quote"> </app-quote>
+
 </div>
+
+<!-- <div class = "body">
+  <img [src]="myimage" alt="",>
+</div> -->
+
+<!-- </div> -->
